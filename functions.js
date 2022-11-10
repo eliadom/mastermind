@@ -1,8 +1,10 @@
 // ------------------ FUNCTIONS OF index.html -----------------
 
 
+var numberTries;
 
 function setPlayerName(){
+    numberTries = 0;
     var player = document.getElementById("playerName");
     if (player.value != ""){
         localStorage["playerName"] = player.value;
@@ -45,6 +47,13 @@ function userGuess(){
     console.log("GUESS IS:" + guess);
     compareArrays();
     console.log("CURRENT SOL:" + currentSol);
+    addTry();
+    if (currentSol[0] == 1 && currentSol[1] == 1 && currentSol[2] == 1 &&
+        currentSol[3] == 1){
+        console.log("OLEEE");
+        document.getElementById("tryButton").disabled = true;
+        document.getElementById("felicitats").style.visibility = "visible";
+    }
 }
 
 /*
@@ -65,4 +74,16 @@ function compareArrays(){
 			}
 		}
 	}
+}
+
+function addTry(){
+    var list = document.getElementById("listOfTries");
+    var litext = document.createTextNode(currentSol);
+    var li = document.createElement("div");
+    li.className = "correctPosition";
+    console.log("LITEXT IS: " + litext);
+    li.setAttribute('id',"tryNumber" + numberTries);
+    li.appendChild(litext);
+    list.appendChild(li);
+    numberTries = numberTries + 1;
 }

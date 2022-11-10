@@ -27,3 +27,18 @@ li{
 li:nth-child(odd){
     background-color: lightgrey;
 }
+
+.correctPosition{
+    background-color:green;
+    color:white;
+}
+
+.incorrectPosition{
+    background-color:orange;
+    color:white;
+}
+
+.notPresent{
+    background-color:grey;
+    color:white;
+}

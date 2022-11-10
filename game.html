@@ -22,7 +22,10 @@
 
 <p>Have a guess!</p>
 <input type="text" id="try" maxlength="4" pattern="[0-9]"/>
-<button onclick="userGuess()">Try</button>
+<button id="tryButton" onclick="userGuess()">Try</button>
+
+<ul id="listOfTries"></ul>
+<img id="felicitats" src="felicitats.png" style="visibility: hidden">
 
 </body>
 </html>
