@@ -37,11 +37,11 @@ function generateNumber(){
     numberTries = 0;
 }
 
-var currentSol = new Array(-1, -1, -1, -1);
+var currentSol = new Array(0, 0, 0, 0);
 var guess = new Array();
 
 function userGuess(){
-    currentSol = [-1, -1, -1, -1];
+    currentSol = [0, 0, 0, 0];
 	console.log("-------------------------");
     guess = document.getElementById("try").value;
     console.log("GUESS IS:" + guess);
