@@ -34,7 +34,7 @@ function generateNumber(){
 
 }
 
-var imputValue[] = new Array(-1, -1, -1, -1);
+var imputValue = new Array(-1, -1, -1, -1);
 
 function userGuess(){
 	var guess = document.getElementById("try").value;
