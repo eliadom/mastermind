@@ -17,16 +17,18 @@
 
 <h1>Mastermind</h1>
 
-<h2><a id="playerName"></a>'s Game</h2>
+<h3><a id="playerName"></a>'s Game</h3>
 <body>
+
+<h2 id="ratio" style="font-size: 18px">You've won 0 out of 0 games</h2>
 
 <p>Have a guess!</p>
 <input type="text" id="try" maxlength="4" pattern="[0-9]"/>
 <button id="tryButton" onclick="userGuess()">Try</button>
 
 <ul id="listOfTries" style="text-align:center"></ul>
-<img id="felicitats" src="felicitats.png" style="visibility: hidden; margin-left: auto; margin-right: auto;">
 <h2 id="endOfGame"></h2>
+<button id="playAgain" style="visibility: hidden" onclick="restartGame()">Play Again</button>
 <img id="squirrel1" src="squirrel.gif" style="visibility: hidden;float:left;">
 <img id="squirrel2" src="squirrel.gif" style="visibility: hidden;float:right;">
 

@@ -4,6 +4,11 @@ h1{
     color: white;
 }
 
+h3{
+    background-color: darkgrey;
+    text-align:left;
+}
+
 h2{
     text-align: center;
 }
@@ -28,26 +33,52 @@ li:nth-child(odd){
     background-color: lightgrey;
 }
 
-.wordContainer{
+#listOfTries{
+    width: 100%;
+    text-align:center;
+}
 
+button{
+    color: white;
+    background-color: darkblue;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.wordContainer{
+    text-align:center;
+
+    height: 80px;
 }
 
 .correctPosition{
+    font-size: 24px;
     background-color:green;
     color:white;
     display: inline;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
 }
 
 .incorrectPosition{
+    font-size: 24px;
     background-color:orange;
     color:white;
     display: inline;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
 }
 
 .notPresent{
+    font-size: 24px;
     background-color:grey;
     color:white;
     display: inline;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
 }
 
 img{

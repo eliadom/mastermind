@@ -13,14 +13,33 @@ function setPlayerName(){
         localStorage["playerName"] = "anonymous player";
     }
     location.href = "game.html";
+    generateNumber();
+
 }
 
 // ------------------ FUNCTIONS OF game.html -----------------
 
 var randomValue = new Array(-1,-1,-1,-1); // secret number !!
+var totalGames = 0;
+var wonGames = 0;
 
+function restartGame(){
+    var list = document.getElementById("listOfTries");
+    while (list.firstChild) {
+        list.removeChild(list.lastChild);
+    }
+    document.getElementById("endOfGame").innerText = "";
+    document.getElementById("squirrel1").style.visibility = "hidden";
+    document.getElementById("squirrel2").style.visibility = "hidden";
+    document.getElementById("tryButton").disabled = false;
+    document.getElementById("playAgain").style.visibility = "hidden";
+    generateNumber();
+}
 
-function generateNumber(){
+function generateNumber(){ //
+    solved = false;
+    numberTries = 0;
+    document.getElementById("playAgain").style.visibility = "hidden";
     var currentNumber; // it's the int that is going to be generated for each number slot
     var i = 0; // index of current number being generated
     while (i < 4){ // generation loop
@@ -35,7 +54,6 @@ function generateNumber(){
         }
     }
 	console.log(randomValue);
-    numberTries = 0;
 }
 
 var currentSol = new Array(0, 0, 0, 0);
@@ -49,9 +67,13 @@ function userGuess(){
     else{
             correctInput();
     }
+    console.log("NUMBER OF TRIES: " + numberTries);
     if (numberTries == 10 && (solved == false)){
         document.getElementById("tryButton").disabled = true;
         document.getElementById("endOfGame").innerText = "YOU RAN OUT OF TRIES!";
+        document.getElementById("playAgain").style.visibility = "visible";
+        totalGames++;
+        document.getElementById("ratio").innerText = "You've won " + wonGames + " out of " + totalGames + " games";
     }
 }
 
@@ -65,9 +87,12 @@ function correctInput(){
     if (currentSol[0] == 1 && currentSol[1] == 1 && currentSol[2] == 1 &&
         currentSol[3] == 1){
         solved = true;
-        document.getElementById("endOfGame").innerText = "GOOD JOB!";
+        wonGames++;
+        totalGames++;
+        document.getElementById("ratio").innerText = "You've won " + wonGames + " out of " + totalGames + " games";
         document.getElementById("tryButton").disabled = true;
-        document.getElementById("felicitats").style.visibility = "visible";
+        document.getElementById("endOfGame").innerText = "GOOD JOB!";
+        document.getElementById("playAgain").style.visibility = "visible";
         document.getElementById("squirrel1").style.visibility = "visible";
         document.getElementById("squirrel2").style.visibility = "visible";
     }
