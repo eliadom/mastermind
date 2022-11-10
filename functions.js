@@ -39,6 +39,7 @@ var currentSol = new Array(-1, -1, -1, -1);
 var guess = new Array();
 
 function userGuess(){
+    currentSol = [-1, -1, -1, -1];
 	console.log("-------------------------");
     guess = document.getElementById("try").value;
     console.log("GUESS IS:" + guess);
