@@ -31,11 +31,13 @@ function generateNumber(){
             i = i + 1;
         }
     }
+	console.log(randomValue);
 }
 
 var imputValue = new Array(-1, -1, -1, -1);
 
 function userGuess(){
+	console.log("-------------------------");
 	var guess = document.getElementById("try").value;
 	console.log(guess);
 }
