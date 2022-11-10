@@ -4,7 +4,6 @@
 var numberTries;
 
 function setPlayerName(){
-    numberTries = 0;
     var player = document.getElementById("playerName");
     if (player.value != ""){
         localStorage["playerName"] = player.value;
@@ -35,6 +34,7 @@ function generateNumber(){
         }
     }
 	console.log(randomValue);
+    numberTries = 0;
 }
 
 var currentSol = new Array(-1, -1, -1, -1);
@@ -76,14 +76,17 @@ function compareArrays(){
 	}
 }
 
+
 function addTry(){
     var list = document.getElementById("listOfTries");
-    var litext = document.createTextNode(currentSol);
-    var li = document.createElement("div");
-    li.className = "correctPosition";
-    console.log("LITEXT IS: " + litext);
-    li.setAttribute('id',"tryNumber" + numberTries);
-    li.appendChild(litext);
-    list.appendChild(li);
+    for (var i = 0; i < 4; i++){
+        var litext = document.createTextNode(currentSol[i]);
+        var nouNum = document.createElement("div");
+        nouNum.className = "correctPosition";
+        console.log("LITEXT IS: " + litext);
+        li.setAttribute('id',"tryNumber" + numberTries);
+        li.appendChild(litext);
+        list.appendChild(li);
+    }
     numberTries = numberTries + 1;
 }
