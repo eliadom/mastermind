@@ -15,7 +15,8 @@ function setPlayerName(){
 
 // ------------------ FUNCTIONS OF game.html -----------------
 
-var randomValue = new Array(-1,-1,-1,-1);
+var randomValue = new Array(-1,-1,-1,-1); // secret number !!
+
 
 function generateNumber(){
     var currentNumber; // it's the int that is going to be generated for each number slot
@@ -34,15 +35,17 @@ function generateNumber(){
 	console.log(randomValue);
 }
 
-var imputValue = new Array(-1, -1, -1, -1);
+var currentSol = new Array(-1, -1, -1, -1);
+var guess = new Array();
 
 function userGuess(){
 	console.log("-------------------------");
-	var guess = document.getElementById("try").value;
-	console.log(guess);
+    guess = document.getElementById("try").value;
+    console.log("GUESS IS:" + guess);
+    compareArrays();
+    console.log("CURRENT SOL:" + currentSol);
 }
 
-var currentSol = new Array(-1, -1, -1, -1); 
 /*
 currentSol[]
 if the value of the index is 1, the number is correct and in the correct position. 
@@ -51,10 +54,10 @@ if the value of the index is 2, the number is correct but in the wrong place
 function compareArrays(){
 	let status = false;
 	for(let i = 0; i < 4; i++){ //randomValue
-		if(randomValue[i] == imputValue[i]) currentSol[i] = 1;
+		if(randomValue[i] == guess[i]) currentSol[i] = 1;
 		else{
 			for(let j = 0; j < 4 && !status; j++){
-				if(randomValue[i] == imputValue[j]){
+				if(randomValue[i] == guess[j]){
 					currentSol[j] = 2;
 					status = true;
 				}
