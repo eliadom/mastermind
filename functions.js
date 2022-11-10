@@ -33,3 +33,25 @@ function generateNumber(){
     }
 
 }
+
+var imputValue[] = new Array(-1, -1, -1, -1);
+var currentSol[] = new Array(-1, -1, -1, -1); 
+/*
+currentSol[]
+if the value of the index is 1, the number is correct and in the correct position. 
+if the value of the index is 2, the number is correct but in the wrong place
+*/
+function compareArrays(){
+	let status = false;
+	for(let i = 0; i < 4; i++){ //randomValue
+		if(randomValue[i] == imputValue[i]) currentSol[i] = 1;
+		else{
+			for(let j = 0; j < 4 && !status; j++){
+				if(randomValue[i] == imputValue[j]){
+					currentSol[j] = 2;
+					status = true;
+				}
+			}
+		}
+	}
+}
