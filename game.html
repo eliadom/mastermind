@@ -2,23 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title id="game">Title</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="functions.js"></script></head>
 </head>
 
 <script>
     window.onload = function (){
-    document.getElementById("playerName").innerHTML = localStorage["playerName"];
+        document.getElementById("playerName").innerHTML = localStorage["playerName"];
+        document.getElementById("game").innerHTML = localStorage["playerName"] + "'s Game";
+        generateNumber();
     }
 </script>
 
 <h1>Mastermind</h1>
 
-<h2><a id="playerName"></a>'s Game
-</h2>
+<h2><a id="playerName"></a>'s Game</h2>
 <body>
 
+<p>Have a guess!</p>
+<input type="text" id="try" maxlength="4" pattern="[0-9]"/>
+<button>Try</button>
 
 </body>
 </html>
