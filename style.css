@@ -28,17 +28,29 @@ li:nth-child(odd){
     background-color: lightgrey;
 }
 
+.wordContainer{
+
+}
+
 .correctPosition{
     background-color:green;
     color:white;
+    display: inline;
 }
 
 .incorrectPosition{
     background-color:orange;
     color:white;
+    display: inline;
 }
 
 .notPresent{
     background-color:grey;
     color:white;
+    display: inline;
+}
+
+img{
+    width:200px;
+    height:200px;
 }
