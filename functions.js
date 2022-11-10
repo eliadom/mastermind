@@ -31,7 +31,6 @@ function generateNumber(){
             i = i + 1;
         }
     }
-
 }
 
 var imputValue = new Array(-1, -1, -1, -1);
@@ -41,7 +40,7 @@ function userGuess(){
 	console.log(guess);
 }
 
-var currentSol[] = new Array(-1, -1, -1, -1); 
+var currentSol = new Array(-1, -1, -1, -1); 
 /*
 currentSol[]
 if the value of the index is 1, the number is correct and in the correct position. 
