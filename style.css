@@ -1,3 +1,13 @@
+h1{
+    text-align:center;
+    background-color: darkblue;
+    color: white;
+}
+
+h2{
+    text-align: center;
+}
+
 body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
