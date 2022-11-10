@@ -1,0 +1,19 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ul{
+    list-style: disc inside none;
+    width: 400px;
+    margin: 10px;
+    padding: 0px;
+}
+
+li{
+    padding-left: 5px;
+    margin-left: -10px;
+}
+
+li:nth-child(odd){
+    background-color: lightgrey;
+}
