@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b60a5c42-c47c-4aa6-8667-11ced8d28dbf" name="Changes" comment="Player name works">
+    <list default="true" id="b60a5c42-c47c-4aa6-8667-11ced8d28dbf" name="Changes" comment="Random number generated successfully">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.html" beforeDir="false" afterPath="$PROJECT_DIR$/game.html" afterDir="false" />
     </list>
@@ -65,7 +66,8 @@
       <option name="presentableId" value="Default" />
       <updated>1668080435065</updated>
       <workItem from="1668080436739" duration="4250000" />
-      <workItem from="1668084737116" duration="2858000" />
+      <workItem from="1668084737116" duration="3643000" />
+      <workItem from="1668092537050" duration="1121000" />
     </task>
     <task id="LOCAL-00001" summary="Changed position">
       <created>1668080449877</created>
@@ -88,7 +90,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668082265125</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Random number generated successfully">
+      <created>1668087651740</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668087651740</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Random number generated successfully">
+      <created>1668087790195</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668087790195</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,6 +124,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changed position" />
     <MESSAGE value="Player name works" />
-    <option name="LAST_COMMIT_MESSAGE" value="Player name works" />
+    <MESSAGE value="Random number generated successfully" />
+    <option name="LAST_COMMIT_MESSAGE" value="Random number generated successfully" />
   </component>
 </project>
