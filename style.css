@@ -46,7 +46,7 @@ button{
 }
 
 button:disabled{
-    color: white;
+    color: black;
     background-color: #92ABCF;
 }
 
