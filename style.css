@@ -45,6 +45,11 @@ button{
     padding: 5px;
 }
 
+button:disabled{
+    color: white;
+    background-color: #92ABCF;
+}
+
 .wordContainer{
     text-align:center;
 
