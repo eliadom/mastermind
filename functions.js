@@ -67,7 +67,7 @@ function userGuess(){
     else{
             correctInput();
     }
-    console.log("NUMBER OF TRIES: " + numberTries);
+    document.getElementById("endOfGame").innerText = "Attempt number" + numberTries;
     if (numberTries == 10 && (solved == false)){
         document.getElementById("tryButton").disabled = true;
         document.getElementById("endOfGame").innerText = "YOU RAN OUT OF TRIES!";
