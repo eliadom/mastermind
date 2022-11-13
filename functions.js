@@ -29,7 +29,7 @@ function restartGame(){
         list.removeChild(list.lastChild);
     }
     generateNumber();
-    var text = "Attempt number " + (numberTries+2) + ":";
+    var text = "Attempt number " + (numberTries+1) + ":";
     document.getElementById("attempts").innerHTML = text;
     document.getElementById("endOfGame").innerText = "";
     document.getElementById("squirrel1").style.visibility = "hidden";
