@@ -30,7 +30,7 @@ function restartGame(){
     }
     generateNumber();
     var text = "Attempt number " + (numberTries+2) + ":";
-    document.getElementById("endOfGame").innerHTML = text;
+    document.getElementById("attempts").innerHTML = text;
     document.getElementById("endOfGame").innerText = "";
     document.getElementById("squirrel1").style.visibility = "hidden";
     document.getElementById("squirrel2").style.visibility = "hidden";
