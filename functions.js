@@ -60,7 +60,8 @@ var currentSol = new Array(0, 0, 0, 0);
 var guess = new Array();
 
 function userGuess(){
-    document.getElementById("attempts").innerHTML = "Attempt number " + numberTries;
+    var text = "Attempt number " + (numberTries+2) + ":";
+    document.getElementById("attempts").innerText = text;
     guess = document.getElementById("try").value;
     if (guess.length != 4){
         window.alert("Length should be 4");
