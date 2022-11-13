@@ -60,6 +60,7 @@ var currentSol = new Array(0, 0, 0, 0);
 var guess = new Array();
 
 function userGuess(){
+    document.getElementById("attempts").innerText = "Attempt number" + numberTries;
     guess = document.getElementById("try").value;
     if (guess.length != 4){
         window.alert("Length should be 4");
@@ -67,7 +68,6 @@ function userGuess(){
     else{
             correctInput();
     }
-    document.getElementById("attempts").innerText = "Attempt number" + numberTries;
     if (numberTries == 10 && (solved == false)){
         document.getElementById("tryButton").disabled = true;
         document.getElementById("endOfGame").innerText = "YOU RAN OUT OF TRIES!";
